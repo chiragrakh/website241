@@ -1,0 +1,168 @@
+<!doctype HTML>
+<html>
+<head>
+<title>Binary - Introduction</title>
+<link rel="stylesheet" href="Home.css">
+</head>
+<body style="justify-content:center;">
+<div class="header">
+  <ul>
+  <li><p> Design and Analysis of Algorithms</p></li>
+  <li><a href="Home.html">Home</a></li>
+ <li><div class="dropdown">
+    <button class="dropbtn">Algorithms 
+    </button>
+    <div class="dropdown-content">
+      <a href="linear.html">Linear Search</a>
+      <a href="binary.html">Binary Search</a>
+    </div>
+  </div></li>
+  
+</ul>
+</div>
+<br><br>
+<div class="daainfo">
+
+  <div class="sechead">
+  <a href="binary.html">Information</a>
+  <a href="binaryquiz1.php">Quiz</a>
+  <a href="binaryanimation.html">Animation</a>
+  <a href="binaryexplanation.html">Explanation</a>
+  
+  </div>
+  <div style="margin-top:100px;">
+</div>
+  <p>Binary Search Algorithm</p>
+  In this article, we will discuss the Binary Search Algorithm. 
+  Searching is the process of finding some particular element in the list. 
+  If the element is present in the list, then the process is called successful, 
+  and the process returns the location of that element. Otherwise, the search is called unsuccessful.
+  <br>  <br><br>
+
+Linear Search and Binary Search are the two popular searching techniques. 
+Here we will discuss the Binary Search Algorithm.
+<br>  <br><br>
+
+Binary search is the search technique that works efficiently on sorted lists. 
+Hence, to search an element into some list using the binary search technique, we must ensure that the list is sorted.
+<br>  <br><br>
+
+Binary search follows the divide and conquer approach in which the list is divided into two halves, 
+and the item is compared with the middle element of the list. 
+If the match is found then, the location of the middle element is returned. 
+Otherwise, we search into either of the halves depending upon the result produced through the match.
+<br>  <br><br>
+
+Now, let's see the algorithm of Binary Search.
+<br>  <br><br>
+
+<div class="linearind">
+  &nbsp&nbsp&nbsp&nbsp1) First, we have to traverse the array elements using a for loop.<br>
+  &nbsp&nbsp&nbsp&nbsp2) In each iteration of for loop, compare the search element with the current array element, and -<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp If the element matches, then return the index of the corresponding array element.<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp If the element does not match, then move to the next element.<br>
+&nbsp&nbsp&nbsp&nbsp3) If there is no match or the search element is not present in the given array, return -1.<br>
+Now, let's see the algorithm of linear search.
+  
+</div>
+  <p> Algorithm: </p>
+  Binary_Search(a, lower_bound, upper_bound, val) // 'a' is the given array, 'lower_bound' is the index of the first array element, 'upper_bound' is the index of the last array element, 'val' is the value to search <br> 
+Step 1: set beg = lower_bound, end = upper_bound, pos = - 1  <br>
+Step 2: repeat steps 3 and 4 while beg <=end  <br>
+Step 3: set mid = (beg + end)/2  <br>
+Step 4: if a[mid] = val  <br>
+set pos = mid  <br>
+print pos  <br>
+go to step 6  <br>
+else if a[mid] > val  <br>
+set end = mid - 1  <br>
+else  <br>
+set beg = mid + 1  <br>
+[end of if]  <br>
+[end of loop]  <br>
+Step 5: if pos = -1  <br>
+print "value is not present in the array" <br> 
+[end of if]  <br>
+Step 6: exit  <br>
+
+  <p>Working of Binary search: </p>
+  Now, let's see the working of the Binary Search Algorithm.
+  <br>  <br><br>
+To understand the working of the Binary search algorithm, let's take a sorted array. It will be easy to understand the working of Binary search with an example.
+<br>  <br><br>
+There are two methods to implement the binary search algorithm -
+<br>  <br><br>
+<ul>
+<li>Iterative method</li>
+<li>Recursive method</li>
+</ul>
+The recursive method of binary search follows the divide and conquer approach.
+<br>
+Let the elements of array be -
+<br><br>
+<img src="binary-search-algorithm1.png" width="300px" style="background-color: white;">
+<br><br>
+
+Let the element to search is, K = 56
+<br><br>
+We have to use the below formula to calculate the mid of the array -
+<br><br>
+mid = (beg + end)/2  
+<br><br>
+So, in the given array -
+<br><br>
+<b>beg</b> = 0
+<br><br>
+<b>end</b> = 8
+<br><br>
+<b>mid</b> = (0 + 8)/2 = 4. So, 4 is the mid of the array.
+<br><br>
+<img src="binary-search-algorithm2.png" width="400px" style="background-color: white;">
+<br><br>
+<img src="binary-search-algorithm3.png" width="400px" style="background-color: white;">
+<br><br>
+<img src="binary-search-algorithm4.png" width="400px" style="background-color: white;">
+<br><br>
+Now, the element to search is found. So algorithm will return the index of the element matched.
+
+
+
+  <p>Binary Search complexity:</p>
+  Now, let's see the time complexity of Binary search in the best case, average case, and worst case. 
+  We will also see the space complexity of Binary search.
+  <br><br>
+  1. Time Complexity
+  <br><br><br><br>
+  <table>
+  <tr><th style="padding: 30px;">Case</th>	<th style="padding: 30px;">Time Complexity</th></tr>
+  <tr><td style="padding: 30px;">Best Case</td>	<td style="padding: 30px;">O(1)</td></tr>
+  <tr><td style="padding: 30px;">Average Case</td>	<td style="padding: 30px;">O(logn)</td></tr>
+  <tr><td style="padding: 30px;">Worst Case</td>	<td style="padding: 30px;">O(logn)</td></tr>
+  </table>
+  
+  <br><br>
+  <u>Best Case Complexity</u> - In Binary search, best case occurs when the element to search is found in first comparison, i.e., 
+  when the first middle element itself is the element to be searched. 
+  The best-case time complexity of Binary search is <b>O(1)</b>.
+  <br><br>
+<u>Average Case Complexity</u> - The average case time complexity of Binary search is <b>O(logn)</b>.
+<br><br>
+<u>Worst Case Complexity</u> - In Binary search, the worst case occurs, 
+when we have to keep reducing the search space till it has only one element. 
+The worst-case time complexity of Binary search is <b>O(logn)</b>.
+
+<br><br><br><br>
+
+2. Space Complexity
+
+<table>
+  <tr><th style="padding: 30px;">Space Complexity:</th>	<th style="padding: 30px;">O(1)</th></tr>
+  </table><br><br>
+  The space complexity of binary search is O(1).
+  </div>
+
+<div class="footer">
+<span>Copyright © 2022 All Rights Reserved.</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!doctype HTML>
+<html>
+<head>
+<title>Design & Analysis of Algorithm</title>
+<link rel="stylesheet" href="Home.css">
+</head>
+<body style="justify-content:center;">
+<div class="header">
+  <ul>
+  <li><p> Design and Analysis of Algorithms</p></li>
+  <li><a href="Home.html">Home</a></li>
+ <li><div class="dropdown">
+    <button class="dropbtn">Algorithms 
+    </button>
+    <div class="dropdown-content">
+      <a href="linear.html">Linear Search</a>
+      <a href="binary.html">Binary Search</a>
+    </div>
+  </div></li>
+  
+</ul>
+</div>
+<br><br>
+<div class="daainfo">
+<p>Algorithm</p>
+An Algorithm is a finite sequence of instructions, each of which has a clear meaning
+and can be performed with a finite amount of effort in a finite length of time. No
+matter what the input values may be, an algorithm terminates after executing a finite
+number of instructions. In addition every algorithm must satisfy the following
+criteria:
+<ul class="ulclass">
+<li>Input: there are zero or more quantities, which are externally supplied;</li>
+<li>Output: at least one quantity is produced;</li>
+<li>Definiteness: each instruction must be clear and unambiguous;</li>
+<li>Finiteness: if we trace out the instructions of an algorithm, then for all cases
+the algorithm will terminate after a finite number of steps;</li>
+<li>Effectiveness: every instruction must be sufficiently basic that it can in
+principle be carried out by a person using only pencil and paper. It is not
+enough that each operation be definite, but it must also be feasible.</li>
+</ul>
+In formal computer science, one distinguishes between an algorithm, and a program.
+A program does not necessarily satisfy the fourth condition. One important example
+of such a program for a computer is its operating system, which never terminates
+(except for system crashes) but continues in a wait loop until more jobs are entered.
+We represent algorithm using a pseudo language that is a combination of the
+constructs of a programming language together with informal English statements.
+<p> Performance of a program:</p>
+The performance of a program is the amount of computer memory and time needed
+to run a program. We use two approaches to determine the performance of a
+program. One is analytical, and the other experimental. In performance analysis we
+use analytical methods, while in performance measurement we conduct experiments.
+<p>Time Complexity: </p>
+The time needed by an algorithm expressed as a function of the size of a problem is
+called the time complexity of the algorithm. The time complexity of a program is the
+amount of computer time it needs to run to completion.
+The limiting behavior of the complexity as size increases is called the asymptotic time
+complexity. It is the asymptotic complexity of an algorithm, which ultimately
+determines the size of problems that can be solved by the algorithm.
+
+2
+
+<p>Space Complexity:</p>
+The space complexity of a program is the amount of memory it needs to run to
+completion. The space need by a program has the following components:
+<p>Instruction space:</p> 
+Instruction space is the space needed to store the compiled
+version of the program instructions.
+<p>Data space:</p> Data space is the space needed to store all constant and variable
+values. Data space has two components:
+ Space needed by constants and simple variables in program.
+ Space needed by dynamically allocated objects such as arrays and class
+instances.
+<p>Environment stack space:</p> 
+The environment stack is used to save information
+needed to resume execution of partially completed functions.
+<p>Instruction Space:</p> The amount of instructions space that is needed depends on
+factors such as:
+<ul class="ulclass">
+<li> The compiler used to complete the program into machine code.</li>
+<li> The compiler options in effect at the time of compilation</li>
+<li> The target computer.</li>
+</ul>
+
+<p>Algorithm Design Goals</p>
+The three basic design goals that one should strive for in a program are:
+1. Try to save Time
+2. Try to save Space
+3. Try to save Face
+A program that runs faster is a better program, so saving time is an obvious
+goal. Like wise, a program that saves space over a competing program is considered
+desirable. We want to “save face” by preventing the program from locking up or
+generating reams of garbled data.
+
+<p>Classification of Algorithms</p>
+If 'n' is the number of data items to be processed or degree of polynomial or the size
+of the file to be sorted or searched or the number of nodes in a graph etc.
+<table class="table1  ">
+  <tr>
+<td>1</td> 
+<td>Next instructions of most programs are executed once or at most only a
+few times. If all the instructions of a program have this property, we say
+that its running time is a constant.</td>
+</tr>
+
+<td>Log n</td> 
+<td> When the running time of a program is logarithmic, the program gets
+  slightly slower as n grows. This running time commonly occurs in
+  programs that solve a big problem by transforming it into a smaller
+  problem, cutting the size by some constant fraction., When n is a million,
+  log n is a doubled. Whenever n doubles, log n increases by a constant,
+  but log n does not double until n increases to n<sup>2</sup></td>
+</tr>
+
+<tr>
+<td>n</td> 
+<td> When the running time of a program is linear, it is generally the case that
+  a small amount of processing is done on each input element. This is the
+  optimal situation for an algorithm that must process n inputs.</td>
+</tr>
+
+
+<tr>
+  <td>n.logn </td> 
+  <td> This running time arises for algorithms that solve a problem by breaking
+    it up into smaller sub-problems, solving then independently, and then
+    combining the solutions. When n doubles, the running time more than
+    doubles.
+    </td>
+  </tr>
+
+ <tr>
+    <td>n<sup>2</sup> </td> 
+    <td> When the running time of an algorithm is quadratic, it is practical for use
+      only on relatively small problems. Quadratic running times typically arise
+      in algorithms that process all pairs of data items (perhaps in a double
+      nested loop) whenever n doubles, the running time increases four fold.      
+      </td>
+    </tr>
+    
+    <tr>
+    <td>n<sup>3</sup> </td> 
+    <td>
+      Similarly, an algorithm that process triples of data items (perhaps in a
+      triple–nested loop) has a cubic running time and is practical for use only
+      on small problems. Whenever n doubles, the running time increases eight
+      fold.     
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>2<sup>n</sup> </td> 
+   <td>
+      
+        Few algorithms with exponential running time are likely to be appropriate
+        for practical use, such algorithms arise naturally as “brute–force”
+        solutions to problems. Whenever n doubles, the running time squares.     
+      </td>
+    </tr>
+
+</table>
+
+<p>Complexity of Algorithms</p>
+The complexity of an algorithm M is the function f(n) which gives the running time
+and/or storage space requirement of the algorithm in terms of the size „n‟ of the
+input data. Mostly, the storage space required by an algorithm is simply a multiple of
+the data size „n‟. Complexity shall refer to the running time of the algorithm.
+The function f(n), gives the running time of an algorithm, depends not only on the
+size „n‟ of the input data but also on the particular data. The complexity function f(n)
+for certain cases are:
+1. Best Case : The minimum possible value of f(n) is called the best case.
+2. Average Case : The expected value of f(n).
+3. Worst Case : The maximum value of f(n) for any key possible input.
+The field of computer science, which studies efficiency of algorithms, is known as
+analysis of algorithms.
+Algorithms can be evaluated by a variety of criteria. Most often we shall be interested
+in the rate of growth of the time or space required to solve larger and larger
+instances of a problem. We will associate with the problem an integer, called the size
+of the problem, which is a measure of the quantity of input data.
+
+<br><br><br><br><br>
+<p>Difference Between Linear Search and Binary Search.</p>
+<br><br>
+
+<video width="1230px" height="700px" controls>
+  <source src="LinVsBinExpl.mp4" type="video/mp4">
+  Your browser does not support the video playback.
+</video>
+
+</div>
+
+<div class="footer">
+<span>Copyright © 2022 All Rights Reserved.</span>
+</div>
+</body>
+</html>
